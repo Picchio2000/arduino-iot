@@ -1,8 +1,8 @@
 // MQTT Configuration - HiveMQ Cloud
 const MQTT_CONFIG = {
     broker: 'd5d2125043654320a3e1f1f8756b4d38.s1.eu.hivemq.cloud',
-    port: 8884, // WebSocket Secure port
-    protocol: 'wss', // Secure WebSocket
+    port: 8000, // WebSocket port (non-secure for testing)
+    protocol: 'ws', // WebSocket
     username: 'arduino_client',
     password: 'Arduino2024!Secure'
     clientId: 'arduino_pwa_' + Math.random().toString(16).substr(2, 8),
