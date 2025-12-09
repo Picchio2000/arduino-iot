@@ -2,7 +2,7 @@
   "name": "Arduino IoT Control",
   "short_name": "Arduino",
   "description": "Controlla il tuo Arduino da remoto",
-  "start_url": "/",
+  "start_url": "/arduino-iot/",
   "display": "standalone",
   "background_color": "#000000",
   "theme_color": "#007AFF",
