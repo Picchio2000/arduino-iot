@@ -4,7 +4,7 @@ const MQTT_CONFIG = {
     port: 8000, // WebSocket port (non-secure for testing)
     protocol: 'ws', // WebSocket
     username: 'arduino_client',
-    password: 'Arduino2024!Secure'
+    password: 'Arduino2024!Secure',
     clientId: 'arduino_pwa_' + Math.random().toString(16).substr(2, 8),
     topics: {
         ledControl: 'alex/arduino/led',      // Arduino ascolta qui per comandi LED
