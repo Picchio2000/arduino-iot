@@ -1,0 +1,240 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background-color: #1C1C1E;
+    color: #FFFFFF;
+    -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.header-icon {
+    width: 48px;
+    height: 48px;
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+/* Status Bar */
+.status-bar {
+    background: #2C2C2E;
+    padding: 15px 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.status-indicator {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.status-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #8E8E93;
+}
+
+.status-dot.connected {
+    background-color: #34C759;
+    animation: pulse 2s infinite;
+}
+
+.status-dot.disconnected {
+    background-color: #FF3B30;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+.divider {
+    border: none;
+    border-top: 1px solid #3A3A3C;
+    margin: 20px 0;
+}
+
+/* Cards */
+.card {
+    background: #2C2C2E;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+/* Reset Button */
+.reset-hold-btn {
+    width: 100%;
+    padding: 20px;
+    background: #007AFF;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.reset-hold-btn:active {
+    transform: scale(0.98);
+    background: #0051D5;
+}
+
+.reset-hold-btn.holding {
+    background: #34C759;
+    animation: holding 0.5s ease-in-out;
+}
+
+@keyframes holding {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+.status-text {
+    margin-top: 12px;
+    text-align: center;
+    font-size: 16px;
+    color: #8E8E93;
+}
+
+/* Block Monitoring */
+.block-indicator {
+    background: #1C1C1E;
+    padding: 15px;
+    border-radius: 8px;
+    border: 2px solid #3A3A3C;
+    transition: all 0.3s;
+}
+
+.block-indicator.active {
+    border-color: #FF3B30;
+    background: rgba(255, 59, 48, 0.1);
+    animation: alert-pulse 1s infinite;
+}
+
+@keyframes alert-pulse {
+    0%, 100% { border-color: #FF3B30; }
+    50% { border-color: #FF9500; }
+}
+
+.block-status {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.block-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #34C759;
+}
+
+.block-indicator.active .block-dot {
+    background: #FF3B30;
+    animation: blink 0.5s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+}
+
+.block-info {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #3A3A3C;
+}
+
+.block-info p {
+    margin: 8px 0;
+    font-size: 14px;
+    color: #8E8E93;
+}
+
+/* Stats Link */
+.stats-link {
+    display: block;
+    margin-top: 15px;
+    padding: 15px;
+    background: #007AFF;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.stats-link:hover {
+    background: #0051D5;
+}
+
+/* Log */
+.log-list {
+    list-style: none;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.log-list li {
+    padding: 10px;
+    margin: 5px 0;
+    background: #1C1C1E;
+    border-radius: 6px;
+    font-size: 13px;
+    color: #8E8E93;
+    font-family: 'SF Mono', 'Monaco', 'Courier New', monospace;
+}
+
+/* Scrollbar */
+.log-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.log-list::-webkit-scrollbar-track {
+    background: #1C1C1E;
+    border-radius: 4px;
+}
+
+.log-list::-webkit-scrollbar-thumb {
+    background: #3A3A3C;
+    border-radius: 4px;
+}
+
+.log-list::-webkit-scrollbar-thumb:hover {
+    background: #48484A;
+}
