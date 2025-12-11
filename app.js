@@ -4,7 +4,8 @@ const API_BASE_URL = 'http://217.154.163.109:3000/api';
 // MQTT Configuration - VPS Ubuntu
 const MQTT_CONFIG = {
     broker: '217.154.163.109',
-    port: 9001,
+    port: 80,
+    path: '/mqtt',
     protocol: 'ws',
     clientId: 'arduino_pwa_' + Math.random().toString(16).substr(2, 8),
     topics: {
