@@ -18,8 +18,8 @@ const messaging = firebase.messaging();
 
 // MQTT Configuration - HiveMQ Public Broker
 const MQTT_CONFIG = {
-    broker: 'broker.hivemq.com',
-    port: 8000,
+    broker: 'broker.emqx.io',
+    port: 8083,
     protocol: 'ws',
     clientId: 'arduino_pwa_' + Math.random().toString(16).substr(2, 8),
     topics: {
